@@ -7,6 +7,7 @@ namespace MovingWindow
     {
         private int y;
         private int x;
+
         public MovingWindow()
         {
             InitializeComponent();
