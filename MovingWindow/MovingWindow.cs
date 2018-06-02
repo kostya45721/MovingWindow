@@ -15,7 +15,6 @@ namespace MovingWindow
 
         private void MovingWindow_KeyUp(object sender, KeyEventArgs e)
         {
-
             y = Location.Y;
             x = Location.X;
 
