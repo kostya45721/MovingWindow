@@ -13,6 +13,14 @@ namespace MovingWindow
             InitializeComponent();
         }
 
+        private void AllTimerKeyStop()
+        {
+            timerKeyDown.Stop();
+            timerKeyUp.Stop();
+            timerKeyLeft.Stop();
+            timerKeyRight.Stop();
+        }
+
         private void MovingWindow_KeyUp(object sender, KeyEventArgs e)
         {
             y = Location.Y;
@@ -44,27 +52,7 @@ namespace MovingWindow
                 CenterToScreen();
             }
         }
-
-        private void AllTimerKeyStop()
-        {
-            timerKeyDown.Stop();
-            timerKeyUp.Stop();
-            timerKeyLeft.Stop();
-            timerKeyRight.Stop();
-        }
-
-        private void timerKeyUp_Tick(object sender, EventArgs e)
-        {
-            y -= 6;
-            SetDesktopLocation(x, y);
-            if (Location.Y < 0)
-            {
-                timerKeyUp.Stop();
-                timerKeyDown.Start();
-            }
-
-        }
-
+        
         private void timerKeyDown_Tick(object sender, EventArgs e)
         {
             y += 6;
@@ -96,6 +84,18 @@ namespace MovingWindow
                 timerKeyRight.Stop();
                 timerKeyLeft.Start();
             }
+        }
+
+        private void timerKeyUp_Tick(object sender, EventArgs e)
+        {
+            y -= 6;
+            SetDesktopLocation(x, y);
+            if (Location.Y < 0)
+            {
+                timerKeyUp.Stop();
+                timerKeyDown.Start();
+            }
+
         }
     }
 }
