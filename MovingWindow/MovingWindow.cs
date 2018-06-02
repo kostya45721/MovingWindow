@@ -16,8 +16,8 @@ namespace MovingWindow
         private void MovingWindow_KeyUp(object sender, KeyEventArgs e)
         {
 
-            y = this.Location.Y;
-            x = this.Location.X;
+            y = Location.Y;
+            x = Location.X;
 
             if (e.KeyData == Keys.Up)
             {
@@ -57,8 +57,8 @@ namespace MovingWindow
         private void timerKeyUp_Tick(object sender, EventArgs e)
         {
             y -= 6;
-            this.SetDesktopLocation(x, y);
-            if (this.Location.Y < 0)
+            SetDesktopLocation(x, y);
+            if (Location.Y < 0)
             {
                 timerKeyUp.Stop();
                 timerKeyDown.Start();
@@ -69,8 +69,8 @@ namespace MovingWindow
         private void timerKeyDown_Tick(object sender, EventArgs e)
         {
             y += 6;
-            this.SetDesktopLocation(x, y);
-            if (this.Location.Y > Screen.PrimaryScreen.Bounds.Height - this.Height)
+            SetDesktopLocation(x, y);
+            if (Location.Y > Screen.PrimaryScreen.Bounds.Height - Height)
             {
                 timerKeyDown.Stop();
                 timerKeyUp.Start();
@@ -80,8 +80,8 @@ namespace MovingWindow
         private void timerKeyLeft_Tick(object sender, EventArgs e)
         {
             x -= 6;
-            this.SetDesktopLocation(x, y);
-            if (this.Location.X < 0)
+            SetDesktopLocation(x, y);
+            if (Location.X < 0)
             {
                 timerKeyLeft.Stop();
                 timerKeyRight.Start();
@@ -91,8 +91,8 @@ namespace MovingWindow
         private void timerKeyRight_Tick(object sender, EventArgs e)
         {
             x += 6;
-            this.SetDesktopLocation(x, y);
-            if (this.Location.X > Screen.PrimaryScreen.Bounds.Width - this.Width)
+            SetDesktopLocation(x, y);
+            if (Location.X > Screen.PrimaryScreen.Bounds.Width - Width)
             {
                 timerKeyRight.Stop();
                 timerKeyLeft.Start();
