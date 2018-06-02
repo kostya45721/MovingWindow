@@ -37,19 +37,19 @@
             // 
             // timerKeyUp
             // 
-            this.timerKeyUp.Tick += new System.EventHandler(this.timerKeyUp_Tick);
+            this.timerKeyUp.Tick += new System.EventHandler(this.TimerKeyUp_Tick);
             // 
             // timerKeyDown
             // 
-            this.timerKeyDown.Tick += new System.EventHandler(this.timerKeyDown_Tick);
+            this.timerKeyDown.Tick += new System.EventHandler(this.TimerKeyDown_Tick);
             // 
             // timerKeyLeft
             // 
-            this.timerKeyLeft.Tick += new System.EventHandler(this.timerKeyLeft_Tick);
+            this.timerKeyLeft.Tick += new System.EventHandler(this.TimerKeyLeft_Tick);
             // 
             // timerKeyRight
             // 
-            this.timerKeyRight.Tick += new System.EventHandler(this.timerKeyRight_Tick);
+            this.timerKeyRight.Tick += new System.EventHandler(this.TimerKeyRight_Tick);
             // 
             // MovingWindow
             // 

@@ -53,7 +53,7 @@ namespace MovingWindow
             }
         }
         
-        private void timerKeyDown_Tick(object sender, EventArgs e)
+        private void TimerKeyDown_Tick(object sender, EventArgs e)
         {
             y += 6;
             SetDesktopLocation(x, y);
@@ -64,7 +64,7 @@ namespace MovingWindow
             }
         }
 
-        private void timerKeyLeft_Tick(object sender, EventArgs e)
+        private void TimerKeyLeft_Tick(object sender, EventArgs e)
         {
             x -= 6;
             SetDesktopLocation(x, y);
@@ -75,7 +75,7 @@ namespace MovingWindow
             }
         }
 
-        private void timerKeyRight_Tick(object sender, EventArgs e)
+        private void TimerKeyRight_Tick(object sender, EventArgs e)
         {
             x += 6;
             SetDesktopLocation(x, y);
@@ -86,7 +86,7 @@ namespace MovingWindow
             }
         }
 
-        private void timerKeyUp_Tick(object sender, EventArgs e)
+        private void TimerKeyUp_Tick(object sender, EventArgs e)
         {
             y -= 6;
             SetDesktopLocation(x, y);
